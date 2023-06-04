@@ -1,3 +1,5 @@
+import day4.ImplementInterface;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -19,6 +21,8 @@ public class Main {
         Department department = new SalesDepartment(10);
         int departmentSize = department.getDepartmentSize();
         System.out.println("Department Size: " + departmentSize);
+
+
 
     }
 }
