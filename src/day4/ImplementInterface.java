@@ -1,6 +1,7 @@
 package day4;
 
-public class ImplementInterface implements Interface1,Interface2 {
+public class ImplementInterface implements Interface1,
+        Interface2 {
     public void firstMethod() {
         System.out.println("Implementation of method 1");
     }

@@ -1,7 +1,7 @@
 package day4;
 
 public class Child extends Parent {
-    private int childVariable;
+    public int childVariable;
 
     public Child(int parentVariable, int childVariable) {
         super(parentVariable);

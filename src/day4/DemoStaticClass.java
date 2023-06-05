@@ -6,7 +6,7 @@ public class DemoStaticClass {
 
     public static int staticMethod() {
         // Perform some computation to get the value for the static variable
-        return 12*120;
+        return 12*12;
     }
 
     static {

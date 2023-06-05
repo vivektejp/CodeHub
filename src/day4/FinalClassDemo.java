@@ -1,7 +1,7 @@
 package day4;
 
 public class FinalClassDemo {
-    final int finalVariable = 10;
+    private final int finalVariable = 10;
 
     final void finalMethod() {
         System.out.println("This is the final method.");
