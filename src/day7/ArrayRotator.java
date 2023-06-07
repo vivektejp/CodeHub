@@ -16,7 +16,6 @@ public class ArrayRotator {
 
     public static void rotateLeft(int[] arr, int x) {
         int n = arr.length;
-        x = x % n;
 
         reverseArray(arr, 0, x - 1);
 
