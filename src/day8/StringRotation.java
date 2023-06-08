@@ -7,10 +7,13 @@ public class StringRotation {
     public int checkStrings(String str1,String str2){
 
         String intr=str1+str1;
+
         if(intr.contains(str2))
             return 1;
         else
             return 0;
+
+
     }
     public static void main(String[] args){
 

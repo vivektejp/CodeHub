@@ -33,10 +33,25 @@ public class ReadCSV {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        List<Student> studentListFinal = new ArrayList<>();
 
-        Collections.sort(studentList);
+        // Collections.sort(studentList);
+        for (int i=0;i<studentList.size();i++) {
+            int min_ind=i;
+            for(int j=i+1;j<studentList.size();j++){
 
-        for (Student student : studentList) {
+                if(studentList.get(min_ind).compareTo(studentList.get(j))>0)
+                    min_ind=j;
+
+
+            }
+            studentListFinal.add(studentList.get(min_ind));
+            Student s3= studentList.get(min_ind);
+            studentList.set(min_ind,studentList.get(i));
+            studentList.set(i,s3);
+
+        }
+        for (Student student : studentListFinal) {
             System.out.println(student);
         }
     }
