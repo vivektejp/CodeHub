@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ReadCSV {
     public static void main(String[] args) {
-        String csvFile = "C:\\Users\\nagir\\IdeaProjects\\CodeHub\\src\\day8\\sample.csv";
+        String csvFile = "C:\\Users\\VIVEK TEJA PEESAPATI\\Desktop\\sample.csv\\";
         List<Student> studentList = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
@@ -35,7 +35,6 @@ public class ReadCSV {
         }
         List<Student> studentListFinal = new ArrayList<>();
 
-        // Collections.sort(studentList);
         for (int i=0;i<studentList.size();i++) {
             int min_ind=i;
             for(int j=i+1;j<studentList.size();j++){
@@ -57,40 +56,4 @@ public class ReadCSV {
     }
 }
 
-class Student implements Comparable<Student> {
-    private String firstName;
-    private String lastName;
-    private int gpa;
 
-    public Student(String firstName, String lastName, int gpa) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gpa = gpa;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public int getGpa() {
-        return gpa;
-    }
-
-    @Override
-    public int compareTo(Student other) {
-        return this.lastName.compareTo(other.lastName);
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", gpa=" + gpa +
-                '}';
-    }
-}
