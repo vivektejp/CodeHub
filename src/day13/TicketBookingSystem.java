@@ -8,7 +8,7 @@ public class TicketBookingSystem {
     private static Lock lock = new ReentrantLock();
 
     public static void main(String[] args) {
-        Thread[] threads = new Thread[5]; // Number of threads
+        Thread[] threads = new Thread[5];
 
         for (int i = 0; i < threads.length; i++) {
             threads[i] = new Thread(new TicketBookingTask(), "Thread " + (i + 1));
@@ -33,7 +33,7 @@ public class TicketBookingSystem {
                 lock.lock();
                 try {
                     if (totalTickets > 0) {
-                        // Simulate some processing time for booking
+
                         try {
                             Thread.sleep(100);
                         } catch (InterruptedException e) {
