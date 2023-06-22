@@ -11,13 +11,16 @@ public class CharacterFrequency {
 
         for (char ch : input.toCharArray()) {
 
-            frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
+            if(!Character.isWhitespace(ch))
+                frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
+
         }
 
         System.out.println("Character Frequencies:");
         for (Map.Entry<Character, Integer> entry : frequencyMap.entrySet()) {
             char ch = entry.getKey();
             int frequency = entry.getValue();
+
             System.out.println(ch + "-" + frequency);
         }
     }
