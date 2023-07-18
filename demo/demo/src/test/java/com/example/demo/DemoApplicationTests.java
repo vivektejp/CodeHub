@@ -38,7 +38,7 @@ class DemoApplicationTests {
 	}
 
 	@Test
-	public void testforEditSubmission(){
+	public void testEditSubmission(){
 
 		Mockito.when(submissionService.editSubmission(submissionForm)).thenReturn(submissionForm);
 	}
